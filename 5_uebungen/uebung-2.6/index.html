@@ -1,0 +1,138 @@
+```html
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Link Exposé</title>
+
+    <style>
+      body {
+        padding: 2rem;
+        margin: 0;
+      }
+
+      a,
+      a:visited {
+        text-decoration: none;
+        color: blue;
+      }
+
+      .link-expose {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5rem;
+        margin: 2rem 0 4rem 0;
+        list-style: none;
+      }
+
+      .link-expose-item {
+        height: 65vh;
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Link 1: beim Darüberfahren unterstreichen */
+      #link1 a:hover {
+        text-decoration: underline;
+      }
+
+      /* Link 2: beim Darüberfahren grün */
+      #link2 a:hover {
+        color: green;
+      }
+
+      /* Link 3: beim Darüberfahren durchstreichen */
+      #link3 a:hover {
+        text-decoration: line-through;
+      }
+
+      /* Link 4: beim Darüberfahren doppelt so gross */
+      #link4 a:hover {
+        font-size: 200%;
+      }
+
+      /* Link 5: beim Darüberfahren roter Hintergrund */
+      #link5 a:hover {
+        background-color: red;
+      }
+
+      /* Link 6: beim Darüberfahren blauer Hintergrund + oben und unten unterstrichen */
+      #link6 a:hover {
+        background-color: blue;
+        text-decoration: underline overline;
+      }
+
+      /* Link 7: beim Klicken doppelt so gross */
+      #link7 a:active {
+        font-size: 200%;
+      }
+
+      /* Link 8: nach dem Besuchen orange */
+      #link8 a:visited {
+        color: orange;
+      }
+
+      /* Link 9: wenn der Link fokussiert ist, fett */
+      #link9 a:focus {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Einfaches Link-Styling mit der :hover "pseudo"-Klasse</h1>
+
+    <section class="link-expose">
+      <article id="link1" class="link-expose-item">
+        <a href="#link1">Dieser Link wird unterstrichen</a>
+      </article>
+
+      <article id="link2" class="link-expose-item">
+        <a href="#link2">Dieser Link wird grün</a>
+      </article>
+
+      <article id="link3" class="link-expose-item">
+        <a href="#link3">Dieser Link wird durchgestrichen</a>
+      </article>
+
+      <article id="link4" class="link-expose-item">
+        <a href="#link4">Dieser Link wird doppelt so gross</a>
+      </article>
+
+      <article id="link5" class="link-expose-item">
+        <a href="#link5">Dieser Link erhält rot als Hintergrund</a>
+      </article>
+
+      <article id="link6" class="link-expose-item">
+        <a href="#link6"
+          >Dieser Link erhält blau als Hintergrund und wird über- und
+          unterstrichen</a
+        >
+      </article>
+    </section>
+
+    <h1>Einfaches Link-Styling mit weiteren "pseudo"-Klassen</h1>
+
+    <section class="link-expose">
+      <article id="link7" class="link-expose-item">
+        <a href="#link7">Dieser Link wird beim Klick doppelt so gross</a>
+      </article>
+
+      <article id="link8" class="link-expose-item">
+        <a href="#link8">Dieser Link ist orange, wenn man ihn besucht hat</a>
+      </article>
+
+      <article id="link9" class="link-expose-item">
+        <a href="#link9">Dieser Link wird fett, wenn er fokusiert ist</a>
+      </article>
+    </section>
+  </body>
+</html>
+``` **Wichtig sind diese Pseudo-Klassen:** * `:hover` → Maus ist über dem Link *
+`:active` → Link wird gerade angeklickt * `:visited` → Link wurde bereits
+besucht * `:focus` → Link hat den Fokus Beispiel: `#link2 a:hover` bedeutet:
+**Wenn die Maus über dem `<a
+  >` innerhalb von `#link2` ist, wird die Regel angewendet.**
+</a>
