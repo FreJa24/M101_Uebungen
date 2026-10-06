@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabellen</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        margin-bottom: 2em;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 0.1em;
+      }
+
+      .fruechte {
+        table-layout: fixed;
+        width: 24em;
+      }
+
+      .fruechte td {
+        width: 33.33%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tabellen</h1>
+
+    <h2>Einfache Tabelle</h2>
+    <table>
+      <tr>
+        <th>Album</th>
+        <th>Jahr</th>
+      </tr>
+      <tr>
+        <td>Rubber Soul</td>
+        <td>1965</td>
+      </tr>
+      <tr>
+        <td>Revolver</td>
+        <td>1966</td>
+      </tr>
+      <tr>
+        <td>Sgt. Pepper's</td>
+        <td>1967</td>
+      </tr>
+      <tr>
+        <td>Das Weisse Album</td>
+        <td>1968</td>
+      </tr>
+      <tr>
+        <td>Abbey Road</td>
+        <td>1969</td>
+      </tr>
+    </table>
+
+    <h2>Verbundene Spalten</h2>
+    <table>
+      <tr>
+        <td colspan="3">Oh Brother Where Art Thou?</td>
+      </tr>
+      <tr>
+        <td>Tatort</td>
+        <td>Versteckte Kamera</td>
+        <td>Is' was, Doc</td>
+      </tr>
+      <tr>
+        <td>Bonanza</td>
+        <td colspan="2">Rauchende Colts</td>
+      </tr>
+    </table>
+
+    <h2>Verbundene Zeilen</h2>
+    <table class="fruechte">
+      <tr>
+        <td>Äpfel</td>
+        <td rowspan="3">Orangen</td>
+        <td>Birnen</td>
+      </tr>
+      <tr>
+        <td>Bananen</td>
+        <td rowspan="2">Ananas</td>
+      </tr>
+      <tr>
+        <td>Lychees</td>
+      </tr>
+    </table>
+  </body>
+</html>
