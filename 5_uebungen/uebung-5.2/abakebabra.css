@@ -1,24 +1,197 @@
-html, body {
-    margin: 0;
+* {
+  box-sizing: border-box;
 }
 
-header, main, footer {
-    overflow: auto;
+html,
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
 }
 
 header {
-    /* source https://commons.wikimedia.org/wiki/File:D%C3%B6ner_Kebab_in_Istanbul.jpg */
-    background-image: url('abakebabra.jpg');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
+  min-height: 330px;
+  padding: 28px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)),
+    url("abakebabra.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
-main {
-    background-color: #EEE;
+h1 {
+  margin: 0;
+  color: white;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.9;
+  text-shadow: 1px 2px 4px #000;
+}
+
+h1 em {
+  color: #e6a11c;
 }
 
 h1 span {
-    display: block;
-    font-size: 0.8em;
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.35em;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+}
+
+header ul,
+footer ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+header ul {
+  gap: 0.5rem;
+}
+
+header a {
+  display: block;
+  padding: 0.65rem 1rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+header a:hover,
+header a:focus {
+  background-color: #e6a11c;
+}
+
+main {
+  padding: 3rem 8%;
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  background-color: #eee;
+}
+
+section {
+  padding: 1.5rem;
+  background-color: white;
+}
+
+#menu {
+  flex: 2 1 0;
+}
+
+#locations,
+#hours {
+  flex: 1 1 0;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  color: #9b1b1f;
+  font-size: 1.7rem;
+}
+
+h3 {
+  margin: 1.25rem 0 0.25rem;
+  color: #e6a11c;
+}
+
+p {
+  line-height: 1.5;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  color: white;
+  font-weight: bold;
+  background-color: #9b1b1f;
+}
+
+td {
+  padding: 0.55rem 0.75rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.subtitle {
+  color: #9b1b1f;
+  font-weight: bold;
+  text-align: left !important;
+  background-color: #f7e5c5;
+}
+
+footer {
+  padding: 1.25rem 8%;
+  background-color: #333;
+}
+
+footer ul {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer li {
+  padding: 0 0.9rem;
+  color: white;
+  border-right: 1px solid #aaa;
+}
+
+footer li:last-child {
+  border-right: 0;
+}
+
+footer a {
+  color: white;
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-wrap: wrap;
+  }
+
+  #menu {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  header {
+    min-height: 280px;
+    padding: 1.5rem;
+  }
+
+  header ul,
+  main {
+    flex-direction: column;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  footer li {
+    margin: 0.3rem 0;
+  }
 }
